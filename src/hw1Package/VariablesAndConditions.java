@@ -1,12 +1,13 @@
 package hw1Package;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class VariablesAndConditions {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		// 1)Write an if/else statement for the following grade requirements:
+		// 1) Write an if/else statement for the following grade requirements:
 //        	- 90 or higher: A
 //        	- 80 to 89: B 
 //        	- 70 to 79: C
@@ -14,32 +15,32 @@ public class VariablesAndConditions {
 //        	- Lower than 55: F
 		
 		Scanner gradeInput = new Scanner(System.in); //<--Allows the user to input a grade
-        System.out.println("What is the student's grade?");
+		System.out.println("What is the student's grade?");
         
-        float userGrade = gradeInput.nextFloat(); //<--Stores the user input as a value
+		float userGrade = gradeInput.nextFloat(); //<--Stores the user input as a value
 //        float userGrade = showGrade;
 //        boolean showGrade = true;
         
 
 //        - if/else statement for the sake of printing out the appropriate grade
-        if(userGrade >= 0 && userGrade < 55) {
+		if(userGrade >= 0 && userGrade < 55) {
         	System.out.println("Their grade is an 'F'");
         }
-        else if(userGrade >= 55 && userGrade <= 69) {
+		else if(userGrade >= 55 && userGrade <= 69) {
         	System.out.println("Their grade is an 'D'");
         }
-        else if(userGrade >= 70 && userGrade <= 79) {
+		else if(userGrade >= 70 && userGrade <= 79) {
         	System.out.println("Their grade is an 'C'");
         }
-        else if(userGrade >= 80 && userGrade <= 89) {
+		else if(userGrade >= 80 && userGrade <= 89) {
         	System.out.println("Their grade is an 'B'");
         }
-        else if(userGrade >= 90) {
+		else if(userGrade >= 90) {
         	System.out.println("Their grade is an 'A'");
         }
 //        continue;
         
-        else {
+		else {
         	System.out.println("Please enter a valid grade value.");
         };
         
@@ -56,7 +57,7 @@ public class VariablesAndConditions {
         Scanner userInput = new Scanner(System.in); //<--Number that user picks/inputs
         System.out.println("Pick a number.");
         
-        int userInt = userInput.nextInt(); //<--Stored value for switch case
+        int userInt = userInput.nextInt(); //<--Stored user value for universal use
         
         switch(userInt) {
         case 1:
@@ -91,9 +92,12 @@ public class VariablesAndConditions {
 //        	- Num is even and between 2-5, display "Cool"
 //        	- If num is even and between 6-20, display "Cool"
 //        	- If num is even and greater than 2-, display "Not Cool"
+        
         System.out.println("Pick another number.");
         
-        
+        if(userInput % 2 == 0) {
+        	System.out.println("The number is even");
+        }
 	}
 
 }
