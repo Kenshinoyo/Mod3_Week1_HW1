@@ -93,11 +93,23 @@ public class VariablesAndConditions {
 //        	- If num is even and between 6-20, display "Cool"
 //        	- If num is even and greater than 2-, display "Not Cool"
         
+        Scanner userInput2 = new Scanner(System.in);
         System.out.println("Pick another number.");
         
-        if(userInput % 2 == 0) {
-        	System.out.println("The number is even");
+        int userInt2 = userInput2.nextInt(); 
+        
+        while(userInt2 % 2 == 0) {
+        	System.out.println("The number is even.");
+        	if(userInt2 >= 2 && userInt2 <= 5) {
+        		System.out.println("But it's not cool.");
+        	}
+        	else {
+        		System.out.println("The number is odd");
+        		break;
+        	}
+        	
         }
+        
 	}
 
 }
